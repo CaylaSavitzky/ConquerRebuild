@@ -1,0 +1,60 @@
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+
+
+
+Nav: div
+  clickable icon
+	md+
+  fixed nav
+
+Banner: header, h1, h4
+  fixed height ~ 55%
+  	@sm
+  fixed height ~ 75%
+	@md+
+  stretches to height or width & make sure smaller dimention (relative to the image) fits and the other dimention is w/e as it centers the image
+
+3 Col: img, h2, p, a
+  each col is 360w with a 180h img, text has padding etc
+  each col is 50% at center (or is 6/12 of the grid, 3 offset)
+  	@md
+  each col is 3/12 w/ 1 col on left and right, and 15px padding (each 250 px), imgs 110px tall
+  	@lg+
+  293.33w, still 15 padding
+
+
+2 Col: img h2 p && one has an a
+  padding 15, max width 555w, 240h
+  	@md
+  345w
+    @lg
+  455
+
+
+Scroller: section, div, div, h1, div p
+
+
+4 Col: div<div<img, h2, p, a
+  w:100%, hight auto/100%, max w:250px
+	@md
+  2col 260w 260h
+  	@lg
+  212w, 212h
+
+1col: div< img, div< h2, p
+  mg-15
+
+scroller
+
+footer

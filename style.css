@@ -254,6 +254,9 @@ input:checked~ul{
 	.flex{
 	display: flex;
 	flex-flow: row;
+	justify-content: space-around;
+	min-width: 100%
+
 }
 }
 
@@ -378,9 +381,13 @@ input:checked~ul{
 	.col_4{
 		max-width: 212.5px;
 	}
+	.flex{
+		min-width: 0%
+	}
 	.col_1{
 		max-width: 940px;
 	}
+
 }
 
 @media (min-width: 1200px){

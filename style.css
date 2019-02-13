@@ -30,31 +30,160 @@ a{
 	cursor: pointer;
 }
 
-.parallax{
+.parallax1{
 	background-attachment: fixed;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 59vw;
     background-image: url("img/bg-1.jpg");
+    height:404px;
 }
 
-.banner{
+.parallax2{
+	background-attachment: fixed;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 100% 600px;
+    background-image: url("img/bg-2.jpg");
+    height:313px;
+    position: relative;
+}
+
+.parallax2>div {
+	padding: 65 15 80 15;
+	position: relative;
+	top:0;
+}
+
+.parallax2>div>h2{
+	font-size: 34px;
+	color:white;
+	text-align: center;
+	text-shadow:2px 2px #999;
+	display: block;
+	font-weight: 500;
+	margin-bottom: 0px;
+}
+
+.parallax2>div>p{
+	margin-top:0px;
+	font-size: 18px;
+	line-height: 24px;
+	color:white;
+	text-align: center;
+	text-shadow:2px 2px #888;
+	font-weight: 500;
+}
+
+
+.parallax3{
+	background-attachment: fixed;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("img/bg-3.jpg");
+    height:150vh;
+    position: relative;
+}
+
+.parallax3>div{
+	position: relative;
+	top:0;
+	flex-basis: 100%;
+}
+
+.parallax3 > div > div>h2{
+	font-size: 34px;
+	color:white;
+	text-align: center;
+	text-shadow:2px 2px black;
+	display: block;
+	font-weight: 500;
+	margin-bottom: 0px;
+}
+
+.parallax3 > .content_holder_outer {
+	opacity: .5;
+}
+
+.parallax3 > * >.content_holder_inner{
+	border-radius: 5px;
+}
+
+.parallax3>div>div>p{
+	font-weight: 500;
+	font-size: 16px;
+	padding:15px 0;
+}
+
+.full {
+	width:100%;
+	flex-basis: 100%;
+}
+
+.content_holder_inner.col_2_s2 {
+	background-color: transparent;
+}
+
+.input {
+	margin-bottom: 15px;
+	border-radius: 5px;
+	padding:5px 5px 5px 10px;
+	font-size: 16px;
+	border:none;
+}
+
+textarea.input {
+	height:114px;
+}
+
+.black_button {
+	background:black;
+	border: 1px solid white;
+	padding: 10 30 10 30;
+	color:white;
+}
+
+.content_holder_inner > .grey_button {
+	padding:10px 30px;
+	text-decoration: none;
+	text-transform: capitalize;
+	font-size: 18px;
+	color:#666;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	background:#fff;
+}
+
+.sectionlink {
+	text-decoration: none;
+}
+
+.left{
+	align-content: left;
+	justify-content: left
+}
+
+
+.parallax1{
     margin-bottom: 70px;
 }
 
 @media (min-width:768px){
-	.banner{
+	.parallax1{
 		width:auto;
 		height:120%;
 		max-width:100%;
 		margin:0;
+		background-size: auto 120%;
 	}
 }
 
 @media (min-width:768px) and (min-aspect-ratio: 1850/1052){
-	.banner {
+	.parallax1 {
 		width:100%;
 		height: calc(1800/10.52)vw
+		background-size: 100% calc(1800/10.52)vw;
 	}
 }
 
@@ -67,10 +196,6 @@ a{
 	-ms-transition: all .5s ease-out, visibility 0s ease;
 	-o-transition: all .5s ease-out, visibility 0s ease;
 	transition: all .5s ease-out, visibility 0s ease;
-}
-
-input{
-	display:none;
 }
 
 .nav > label {
@@ -92,6 +217,9 @@ input{
 		border-radius:5px; 
 	}	
 
+label~input{
+	display: none;
+}
 
 input~ul{
 	overflow: hidden;
@@ -170,6 +298,22 @@ input:checked~ul{
 	max-width: 720px;
 }
 
+.col_1_medium{
+	margin: 0 15 30 15;
+	max-width: 720px;
+	flex-basis: 100%;
+}
+
+.parallax3 >.flex{
+	justify-content: center;
+}
+
+.margin_top_30 > .col_2_s2{
+	flex-basis: 100%;
+	margin:0 15 0 15;
+	width:100%;
+}
+
 .flex{
 	display: flex;
 	flex-flow: row wrap;
@@ -245,6 +389,27 @@ input:checked~ul{
 	justify-content: center;
 }
 
+.margin_top_30{
+	margin-top: 30px;
+}
+
+.margin_sides_15{
+	margin: 0 15px 0 15px;
+}
+
+.padding_top_45 {
+	padding-top: 45px;
+}
+
+footer > .material_holder_outer {
+	padding: 0;
+	background-color: #f2f2f2;
+}
+
+.border_bottom_sm{
+	border-bottom:1px solid grey;
+}
+
 
 @media (min-width: 480px)
 {
@@ -252,12 +417,15 @@ input:checked~ul{
 		padding-top:12%;
 	}
 	.flex{
+
 	display: flex;
 	flex-flow: row;
 	justify-content: space-around;
 	min-width: 100%
 
 }
+
+
 }
 
 @media (min-width: 768px){
@@ -342,6 +510,15 @@ input:checked~ul{
 	.col_2{
 		max-width: 345px;
 	}
+	.parallax3>div>div>p{
+		font-size: 18px;
+	}
+	.margin_top_30 > .col_2_s2{
+		max-width: 345px;	
+	}
+	.parallax3{
+    	height:100vh;
+	}
 }
 
 
@@ -386,6 +563,10 @@ input:checked~ul{
 	}
 	.col_1{
 		max-width: 940px;
+	}
+
+	.col_1_medium{
+		max-width: 750px;
 	}
 
 }

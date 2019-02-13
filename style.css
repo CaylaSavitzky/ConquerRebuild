@@ -36,14 +36,14 @@ a{
     background-repeat: no-repeat;
     background-size: 100% 59vw;
     background-image: url("img/bg-1.jpg");
-    height:404px;
+    height:59vw;
 }
 
 .parallax2{
 	background-attachment: fixed;
     background-position: bottom center;
     background-repeat: no-repeat;
-    background-size: 100% 600px;
+    background-size: cover;
     background-image: url("img/bg-2.jpg");
     height:313px;
     position: relative;
@@ -413,7 +413,7 @@ footer > .material_holder_outer {
 
 @media (min-width: 480px)
 {
-	.banner>div {
+	.parallax1>div {
 		padding-top:12%;
 	}
 	.flex{
@@ -422,14 +422,18 @@ footer > .material_holder_outer {
 	flex-flow: row;
 	justify-content: space-around;
 	min-width: 100%
-
 }
+	.parallax1>div>h1{
+		margin-top: 0px;
+	}
 
 
 }
 
 @media (min-width: 768px){
-
+	.parallax1>div>h1{
+		margin-top: auto;
+	}
 	input~ul{
 		visibility: visible;
 		-moz-transform: scaleY(1);
@@ -587,13 +591,13 @@ footer > .material_holder_outer {
 }
 
 
-.banner>div{
+.parallax1>div{
 
 	display: block;
 	width:100%;
 }
 
-.banner>div>h1{
+.parallax1>div>h1{
 	font-size: 70px;
 	color:white;
 	text-align: center;
@@ -603,7 +607,7 @@ footer > .material_holder_outer {
 	margin-bottom: 0px;
 }
 
-.banner>div>h4{
+.parallax1>div>h4{
 	margin-top:0px;
 	font-size: 25px;
 	color:white;

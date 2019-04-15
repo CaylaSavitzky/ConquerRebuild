@@ -82,7 +82,7 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("img/bg-3.jpg");
-    height:150vh;
+    min-height: 800px;
     position: relative;
 }
 
@@ -175,11 +175,11 @@ textarea.input {
 		height:120%;
 		max-width:100%;
 		margin:0;
-		background-size: auto 120%;
+		background-size: 100% calc(1800/10.52)vw;
 	}
 }
 
-@media (min-width:768px) and (min-aspect-ratio: 1850/1052){
+@media (min-width:768px) and (min-aspect-ratio: 1052/1850){
 	.parallax1 {
 		width:100%;
 		height: calc(1800/10.52)vw
@@ -411,6 +411,41 @@ footer > .material_holder_outer {
 }
 
 
+
+.parallax1>div{
+
+	display: block;
+	width:100%;
+}
+
+.parallax1>div>h1{
+	font-size: 60px;
+	color:white;
+	text-align: center;
+	text-shadow:2px 2px black;
+	display: block;
+	font-weight: 500;
+	margin-bottom: 0px;
+}
+
+.parallax1>div>h4{
+	margin-top:0px;
+	font-size: 25px;
+	color:white;
+	text-align: center;
+	text-shadow:2px 2px black;
+	font-weight: 500;
+}
+
+
+
+@media (min-width: 400px){
+	h1{
+		font-size: 70px;
+	}
+}
+
+
 @media (min-width: 480px)
 {
 	.parallax1>div {
@@ -418,19 +453,25 @@ footer > .material_holder_outer {
 	}
 	.flex{
 
-	display: flex;
-	flex-flow: row;
-	justify-content: space-around;
-	min-width: 100%
-}
+		display: flex;
+		flex-flow: row;
+		justify-content: space-around;
+		min-width: 100%
+	}
 	.parallax1>div>h1{
 		margin-top: 0px;
 	}
-
-
+	.parallax3{
+    	min-height: 600px;
+	}
 }
 
 @media (min-width: 768px){
+
+	.nav, .nav>label, .nav>ul, .nav>ul>li, .nav>ul>li>ul, .nav>ul>li>ul>li, .nav>ul>li>a{
+	max-height: 70px;
+}
+
 	.parallax1>div>h1{
 		margin-top: auto;
 	}
@@ -446,11 +487,11 @@ footer > .material_holder_outer {
 	}
 
 	.nav, .nav>label, .nav>ul, .nav>ul>li, .nav>ul>li>ul, .nav>ul>li>ul>li, .nav>ul>li>a{
-		-webkit-transition: all .3s ease-out;
-		-moz-transition: all .3s ease-out;
-		-ms-transition: all .3s ease-out;
-		-o-transition: all .3s ease-out;
-		transition: all .3s ease-out;
+		-webkit-transition: max-height .3s ease-out;
+		-moz-transition: max-height .3s ease-out;
+		-ms-transition: max-height .3s ease-out;
+		-o-transition: max-height .3s ease-out;
+		transition: max-height .3s ease-out;
 	}
 
 	.nav {
@@ -520,14 +561,12 @@ footer > .material_holder_outer {
 	.margin_top_30 > .col_2_s2{
 		max-width: 345px;	
 	}
-	.parallax3{
-    	height:100vh;
-	}
 }
 
 
 
 @media (min-width: 992px){
+
 
 	.nav>ul>li>a{
 		font-size:20px;
@@ -589,30 +628,3 @@ footer > .material_holder_outer {
 		max-width: 1140px;
 	}
 }
-
-
-.parallax1>div{
-
-	display: block;
-	width:100%;
-}
-
-.parallax1>div>h1{
-	font-size: 70px;
-	color:white;
-	text-align: center;
-	text-shadow:2px 2px black;
-	display: block;
-	font-weight: 500;
-	margin-bottom: 0px;
-}
-
-.parallax1>div>h4{
-	margin-top:0px;
-	font-size: 25px;
-	color:white;
-	text-align: center;
-	text-shadow:2px 2px black;
-	font-weight: 500;
-}
-

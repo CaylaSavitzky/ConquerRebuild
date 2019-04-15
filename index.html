@@ -8,7 +8,6 @@
 	<veiwport>
 	</veiwport>
 	<!--- Remaining Tasks
-		0) fix div.nav to get parallax2 working right
 		1) Better words
 		2) working links
 		2.5) Make parallax1 less wiggly
@@ -17,13 +16,13 @@
 		5?) Send form emails things to me
 	-->
 </head>
-<body onresize="resizefunc()">
+<body onscroll="scrollfunc(event,this)">
 	
-	<header id = "section1">
+	<header id = "section1" class = section >
 		<div class = "parallax1">
 			<div>
 				<h1>
-					Challange
+					"Conquer"
 				</h1>
 				<h4>
 					Just css3, html5, and javascript
@@ -66,7 +65,7 @@
 		</div>
 
 
-	<div id = "section2">
+	<div id = "section2" class = section>
 		<section class = "section2_area1">
 			<div class = "material_holder_outer">
 				<div class = "material_holder_inner col_3_holder">
@@ -115,7 +114,7 @@
 				</div>
 			</div>
 		</section>
-		<section class = "section2_area2">
+		<section class = "section2_area2" >
 			<div class = "material_holder_outer">
 				<div class = "material_holder_inner flex_holder">
 					<div class = "content_holder_outer col_2">
@@ -153,7 +152,7 @@
 	</div>
 
 
-	<div id = "section3">
+	<div id = "section3" class = section>
 		<section class = "section3_area1">
 			<div class = "parallax2">
 				<div>
@@ -239,7 +238,7 @@
 	</div>
 
 
-	<div id = "section4">
+	<div id = "section4" class = section>
 		<section class = section4_area1>
 			<div class = "material_holder_outer">
 				<div class = "material_holder_inner parallax3">
@@ -279,7 +278,7 @@
 	</div>
 
 
-	<footer id = "section5">
+	<footer id = "section5" class = section>
 		<div class = "material_holder_outer">
 			<div class = "material_holder_inner">
 				<div class = "content_holder_outer 1_col padding_top_45">
@@ -303,9 +302,6 @@
 </body>
 </html>
 <script>
-	var nav = document.getElementById("navitems");
-	var navcheckbox = document.getElementById("navcheckboxlabel");
-
 	var links = document.getElementsByClassName("sectionlink");
 	for (i = 0; i<links.length; i++){
 		links[i].name = links[i].href;
@@ -313,28 +309,22 @@
 	}
 
 
-	function resizefunc(){
-		navbarresize();
-	}
-
-	function navbarresize(){
-		if (window.innerWidth < 768){
-			nav.style.display = "none";
-			setTimeout(function(){ nav.style.display = "block"; }, 500);
-		}
-		if (window.innerWidth > 768){
-			
-		}
-	}
-
 	function scrollscreen(element){
 		var address = element.name.slice(-8);
 		var tar = document.getElementById(address);
-		tar.scrollIntoView({behavior: 'smooth'});
+		tar.scrollIntoView({behavior: 'smooth', block: "start"});
+		console.log(tar);
 		for (i = 0; i<links.length; i++){
 			links[i].classList.remove("highlighted");
 		}
 		element.classList.add("highlighted");
+	}
+
+	var sections = document.getElementsByClassName('section')
+	console.log(sections[4].getBoundingClientRect().top)
+
+	function scrollfunc(event,element){
+		screenLocY = element.scrollY;
 	}
 
 	
